@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+		integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+		crossorigin="anonymous" />
+	<link rel="stylesheet" href="styles.css">
+	<title> Lista To-Do</title>
+</head>
+
+<body>
+	<!-- TITULO -->
+	<header>
+		<h1>Tareas</h1>
+	</header>
+	<!-- CAMPO PARA INTRODUCIR TAREA-->
+	<form>
+		<input type="text" placeholder="Inserta tu tarea" class="todo_input" />
+		<button class="todo_button" type="submit">
+			<i class="fas fa-plus-square"></i>
+		</button>
+		<div class="select">
+			<select name="todos" class="filter_todo">
+				<option value="all">Todo</option>
+				<option value="completed">Completado</option>
+				<option value="uncompleted">Incompleto</option>
+			</select>
+		</div>
+	</form>
+	<!-- CONTENEDOR PARA MOSTAR LA LISTA AÑADIENDO TAREAS DINACAMENTE USANDO JAVASCRIPT -->
+	<div class="todo_container">
+		<ul class="todo_list"></ul>
+	</div>
+	<!-- ENLACE JAVASCRIPT -->
+	<script src="main.js"></script>
+</body>
+
+</html>
