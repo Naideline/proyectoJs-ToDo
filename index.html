@@ -1,42 +1,44 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-		integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
-		crossorigin="anonymous" />
-	<link rel="stylesheet" href="styles.css">
-	<title> Lista To-Do</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="styles.css">
+  <title>ToDoApp</title>
 </head>
-
 <body>
-	<!-- TITULO -->
-	<header>
-		<h1>Tareas</h1>
-	</header>
-	<!-- CAMPO PARA INTRODUCIR TAREA-->
-	<form>
-		<input type="text" placeholder="Inserta tu tarea" class="todo_input" />
-		<button class="todo_button" type="submit">
-			<i class="fas fa-plus-square"></i>
-		</button>
-		<div class="select">
-			<select name="todos" class="filter_todo">
-				<option value="all">Todo</option>
-				<option value="completed">Completado</option>
-				<option value="uncompleted">Incompleto</option>
-			</select>
-		</div>
-	</form>
-	<!-- CONTENEDOR PARA MOSTAR LA LISTA AÑADIENDO TAREAS DINACAMENTE USANDO JAVASCRIPT -->
-	<div class="todo_container">
-		<ul class="todo_list"></ul>
-	</div>
-	<!-- ENLACE JAVASCRIPT -->
-	<script src="main.js"></script>
+  <!-- TITULO -->
+  <header>
+    <h1>My tasks</h1>
+  </header>
+  <form>
+    <input type="text" placeholder="Insert your task" id="nombre_tarea" class="todo_input" required>
+    <div class="select">
+      <select id="categoria_tarea" name="categoria" class="filter_todo" required>
+        <option value="">Category</option>
+        <option value="cetav" class="cetav">CETAV</option>
+        <option value="personal" class="personal">Personal</option>
+        <option value="hogar" class="hogar">Home</option>
+      </select>
+    </div>
+    <button class="todo_button" id="boton_anadir_tarea" type="submit" disabled>
+      <i class="fas fa-plus-square"></i>
+    </button>
+  </form>
+  <!-- Añade las tareas -->
+  <div class="todo_container">
+    <ul id="task-list" class="todo_list"></ul>
+  </div>
+  <!--Botón de eliminar tareas completas-->
+  <div class="remove_all_container">
+    <button class="remove_completed_btn">Remove all checked</button>
+  </div>
+
+  <script src="main.js"></script>
 </body>
 
 </html>

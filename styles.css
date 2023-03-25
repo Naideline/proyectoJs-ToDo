@@ -4,6 +4,11 @@
 	box-sizing: border-box;
 }
 
+h1 {
+	font-weight: 400;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	
+}
 body {
 	background: linear-gradient(to right, #ecd3e7, #bbecec);
 	background: #a7d2c3;
@@ -15,7 +20,7 @@ body {
 header,
 form {
 	display: flex;
-	min-height: 15px;
+	min-height: 15vh;
 	justify-content: center;
 	align-items: center;
 }
@@ -139,4 +144,19 @@ select {
 .fall {
 	transform: translateY(4rem) scale(0.4) rotateZ(20deg);
 	opacity: 0;
+}
+
+.remove_all_container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.remove_completed_btn{
+    background-color: #c065c0;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
