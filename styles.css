@@ -15,7 +15,7 @@ body {
 header,
 form {
 	display: flex;
-	min-height: 15vh;
+	min-height: 15px;
 	justify-content: center;
 	align-items: center;
 }
