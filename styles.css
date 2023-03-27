@@ -46,37 +46,41 @@ form button:hover {
 }
 
 /* STYLING DROPDOWN */
-select {
+datalist {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
 	outline: none;
-	border: none;
+	border: none; 
 }
 
-.select {
+.fa {
+	display: block;
+}
+
+.category {
 	margin: 1rem;
 	position: relative;
 	overflow: hidden;
 }
 
-select {
+datalist {
 	color: #c065c0;
 	width: 8rem;
 	cursor: pointer;
 	padding: 0.7rem;
 }
 
-.select::after {
+/* .category::after {
 	content: "\25bc";
 	position: absolute;
 	color: #c065c0;
 	top: 7px;
 	right: 6px;
 	pointer-events: none;
-}
+} */
 
-.select:hover::after {
+.category:hover::after {
 	color: #583429;
 }
 

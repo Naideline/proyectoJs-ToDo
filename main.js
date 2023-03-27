@@ -2,14 +2,14 @@ const todoInput = document.querySelector(".todo_input");
 const todoButton = document.querySelector(".todo_button");
 const todoList = document.querySelector(".todo_list");
 const nombreTarea = document.getElementById("nombre_tarea");
-const categoriaTarea = document.getElementById("categoria_tarea");
+const categoriesInput = document.getElementById("categoriesInput");
 
 // Habilitar/deshabilitar el botón de "Añadir tarea" según los campos tengan un valor o no
 nombreTarea.addEventListener("input", validarCampos);
-categoriaTarea.addEventListener("input", validarCampos);
+categoriesInput.addEventListener("input", validarCampos);
 
 function validarCampos() {
-  if (nombreTarea.value !== "" && categoriaTarea.value !== "") {
+  if (nombreTarea.value !== "" && categoriesInput.value !== "") {
     todoButton.disabled = false;
   } else {
     todoButton.disabled = true;
@@ -31,6 +31,12 @@ function addTodo(event) {
   newTodo.innerText = todoInput.value;
   newTodo.classList.add("todo_item");
   todoDiv.appendChild(newTodo);
+
+// Nombre categoría
+  const valueCategories = document.querySelector("#categoriesInput").value;
+  const spanValue = document.createElement("span");
+  spanValue.innerText = ` - ${valueCategories}`;
+  newTodo.appendChild(spanValue);
 
   // Tiempo transcurrido
   const now = new Date();
@@ -117,4 +123,3 @@ function removeCompleted() {
     completedItem.remove();
   });
 }
-
