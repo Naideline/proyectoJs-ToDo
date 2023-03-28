@@ -1,3 +1,3 @@
 # proyectoJs-ToDo
-Naideline Rivera
-Valeria Acuña
+-Naideline Rivera Aguilar
+-Valeria Acuña Monge
