@@ -11,19 +11,14 @@
   <link rel="stylesheet" href="styles.css">
   <title>ToDoApp</title>
 </head>
-
 <body>
 <!-- TITULO -->
   <header>
     <h1>My tasks</h1>
   </header>
-
+<!-- Input y categorias -->
   <form>
     <input type="text" placeholder="Insert your task" id="nombre_tarea" class="todo_input" required>
-    <button class="todo_button" id="boton_anadir_tarea" type="submit" disabled>
-      <i class="fas fa-plus-square"></i>
-    </button>
-
     <input id="categoriesInput" type="text" placeholder="Enter category" list="categoriaList">
     <datalist class="category fa" id="categoriaList">
       <option class="fa" value="Personal">&#xf007;</option>
@@ -32,8 +27,11 @@
       <option class="fa" value="Study">&#xf19d;</option>
       <option class="fa" value="House">&#xf015;</option>
     </datalist>
+    <button class="todo_button" id="boton_anadir_tarea" type="submit" disabled>
+      <i class="fas fa-plus-square"></i>
+    </button>
   </form>
-  
+
 <!-- Añade las tareas -->
   <div class="todo_container">
     <ul id="task-list" class="todo_list"></ul>
@@ -43,7 +41,6 @@
   <div class="remove_all_container">
     <button class="remove_completed_btn">Remove all checked</button>
   </div>
-
 </body>
 <script src="main.js"></script>
 </html>

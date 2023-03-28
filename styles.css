@@ -66,9 +66,6 @@ datalist {
 
 datalist {
 	color: #c065c0;
-	width: 8rem;
-	cursor: pointer;
-	padding: 0.7rem;
 }
 
 /* .category::after {
@@ -93,6 +90,10 @@ datalist {
 .todo_list {
 	min-width: 40%;
 	list-style: none;
+}
+
+.todo_input{
+    margin-right: 10px;
 }
 
 .todo {

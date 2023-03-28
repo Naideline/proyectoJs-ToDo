@@ -32,11 +32,34 @@ function addTodo(event) {
   newTodo.classList.add("todo_item");
   todoDiv.appendChild(newTodo);
 
-// Nombre categoría
+  // Nombre categoría
   const valueCategories = document.querySelector("#categoriesInput").value;
   const spanValue = document.createElement("span");
   spanValue.innerText = ` - ${valueCategories}`;
   newTodo.appendChild(spanValue);
+
+  // Crear un elemento span para mostrar el icono de la categoría
+  const categoryIcon = document.createElement("span");
+  categoryIcon.classList.add("category-icon");
+
+  // Obtener el valor de la categoría seleccionada
+  const categoryValue = categoriesInput.value;
+
+  // Asignar el código del icono correspondiente al elemento span
+  if (categoryValue === "Personal") {
+    categoryIcon.innerHTML = "&#xf007;"; // Icono de la casa
+  } else if (categoryValue === "Work") {
+    categoryIcon.innerHTML = "&#xf0b1;"; // Icono de maletín
+  } else if (categoryValue === "Shopping") {
+    categoryIcon.innerHTML = "&#xf07a;"; // Icono de bolsa de compras
+  } else if (categoryValue === "Study") {
+    categoryIcon.innerHTML = "&#xf19d;"; // Icono de graduado
+  } else if (categoryValue === "House") {
+    categoryIcon.innerHTML = "&#xf015;"; // Icono de llave
+  }
+
+  // Agregar el elemento span al elemento <li> de la tarea
+  newTodo.appendChild(categoryIcon);
 
   // Tiempo transcurrido
   const now = new Date();
@@ -86,7 +109,7 @@ function getElapsedTime(created) {
 
 function updateElapsedTime() {
   const todos = document.querySelectorAll(".todo_item");
-  todos.forEach(todo => {
+  todos.forEach((todo) => {
     const timeSpan = todo.querySelector(".time_span");
     const created = new Date(todo.getAttribute("data-created"));
     timeSpan.innerText = getElapsedTime(created);
@@ -119,7 +142,7 @@ removeCompletedButton.addEventListener("click", removeCompleted);
 
 function removeCompleted() {
   const completedItems = document.querySelectorAll(".completedItem");
-  completedItems.forEach(completedItem => {
+  completedItems.forEach((completedItem) => {
     completedItem.remove();
   });
 }
